@@ -14,7 +14,7 @@ function handleAddVehicle(player, args) {
         player.lastVehicle.destroy();
     }
 
-    const vehicleName = args[0];
+    const vehicleName = args.join(' ');
     const fwdVector = getForwardVectorServer(player.rot);
     const positionInFront = {
         x: player.pos.x + fwdVector.x * 4,
