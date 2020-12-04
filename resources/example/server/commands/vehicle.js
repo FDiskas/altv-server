@@ -3,6 +3,7 @@ import { registerCmd } from '../systems/chat';
 import { getForwardVectorServer } from '../utility/vector';
 
 registerCmd('vehicle', '/vehicle <name> | Summons a vehicle in front of a player.', handleAddVehicle);
+registerCmd('ve', '/ve <name> | Summons a vehicle in front of a player.', handleAddVehicle);
 
 function handleAddVehicle(player, args) {
     if (!args || !args[0]) {

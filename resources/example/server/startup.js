@@ -8,6 +8,9 @@ import './commands/respawn';
 import './commands/utility';
 import './commands/vehicle';
 import './commands/weapon';
+import './commands/ped';
+import './commands/anim';
+import './commands/exit';
 
 // Configuration Files
 import './configuration/config';

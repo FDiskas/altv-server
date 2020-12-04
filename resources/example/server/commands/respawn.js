@@ -4,6 +4,7 @@ import { randomPositionAround } from '../utility/vector';
 
 registerCmd('respawn', '/respawn | Respawn the player at spawn.', handleRespawn);
 registerCmd('spawn', '/spawn | Respawn the player at spawn.', handleRespawn);
+registerCmd('re', '/re | Respawn the player at spawn.', handleRespawn);
 
 function handleRespawn(player) {
     const randomPosition = randomPositionAround(DEFAULT_CONFIG.SPAWN, DEFAULT_CONFIG.SPAWN_RANGE);
