@@ -11,13 +11,9 @@ registerCmd('players', '/players | Returns current player count.', player => {
 });
 
 registerCmd('help', '/help | Returns available commands to console.', player => {
-    const coords = player.pos;
-    player.send(`
-    /ped <name> | Spawn character by name.
-    /ve <name> | Summons a vehicle in front of a player.
-    /wep <name> | Summon a weapon by name.
-    /re | Respawn the player at spawn.
-    /exit | Exit (kick) from the game.
-    `);
-    console.log(coords);
+    player.send(`/ped <name> | Spawn character by name.`);
+    player.send(`/ve <name> | Summons a vehicle\n in front of a player.`);
+    player.send(`/wep <name> | Summon a weapon by name.`);
+    player.send(`/re | Respawn the player at spawn.`);
+    player.send(`/exit | Exit (kick) from the game.`);
 });

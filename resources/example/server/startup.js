@@ -30,4 +30,4 @@ import './systems/chat';
 import './utility/array';
 import './utility/vector';
 
-alt.log(chalk.cyanBright('The resource has now started! PogChamp'));
+alt.log(chalk.cyanBright('The resource has now started!'));

@@ -1,5 +1,7 @@
 import alt from 'alt-server';
 import chalk from 'chalk';
+import chat from 'chat';
+
 import { randomPositionAround } from '../utility/vector';
 import { DEFAULT_CONFIG } from '../configuration/config';
 
@@ -17,4 +19,7 @@ function playerConnect(player) {
     player.model = randomModel;
     player.spawn(randomPosition.x, randomPosition.y, randomPosition.z, 0);
     player.send(`Welcome to the server!`);
+    player.send(`Press T and type /help for list of available commands`);
+
+    chat.broadcast(`==> ${player.name} has joined.`);
 }
