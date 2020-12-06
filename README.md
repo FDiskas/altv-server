@@ -1,25 +1,22 @@
-## alt:V - Quick Start
+## alt:V
 
 ---
 
-[❤️ Become a Sponsor of my Open Source Work](https://github.com/sponsors/Stuyk/)
-
-[⌨️ Learn how to script for alt:V](https://stuyk.github.io/altv-javascript-guide/)
-
-⭐ This repository if you found it useful!
+### Links: https://docs.altv.mp/js/api/alt-server.Player.html#_altmp_altv_types_alt_server_Player
 
 ---
 
 This repo will do everything for you; including download the latest server files.
 
 Includes the following:
-* Chat
-* Chat Commands
-* Weapon Commands
-* Vehicle Commands
-* Kill Feed
-* Respawn on Death
-* A scale-able folder structure
+
+-   Chat
+-   Chat Commands
+-   Weapon Commands
+-   Vehicle Commands
+-   Kill Feed
+-   Respawn on Death
+-   A scale-able folder structure
 
 ## Requirements
 

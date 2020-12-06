@@ -1,3 +1,7 @@
+// @ts-check
+/// <reference types="@altv/types" />
+import * as alt from 'alt-server';
+
 import { registerCmd } from '../systems/chat';
 
 registerCmd('anim', '/anim <name> <type> | Showing character animation by name.', summonPed);

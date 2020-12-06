@@ -1,4 +1,6 @@
 import alt from 'alt-server';
+
+import { DEFAULT_CONFIG } from '../configuration/config';
 import { registerCmd } from '../systems/chat';
 import { getForwardVectorServer } from '../utility/vector';
 
@@ -6,22 +8,25 @@ registerCmd('vehicle', '/vehicle <name> | Summons a vehicle in front of a player
 registerCmd('ve', '/ve <name> | Summons a vehicle in front of a player.', handleAddVehicle);
 
 function handleAddVehicle(player, args) {
-    if (!args || !args[0]) {
-        player.send(`/vehicle <name>`);
-        return;
-    }
-
-    if (player.lastVehicle && player.lastVehicle.valid) {
-        player.lastVehicle.destroy();
-    }
-
-    const vehicleName = args.join(' ');
     const fwdVector = getForwardVectorServer(player.rot);
+    let vehicleName = '';
+
     const positionInFront = {
         x: player.pos.x + fwdVector.x * 4,
         y: player.pos.y + fwdVector.y * 4,
         z: player.pos.z
     };
+
+    if (player.lastVehicle && player.lastVehicle.valid) {
+        player.lastVehicle.destroy();
+    }
+
+    if (!args || !args[0]) {
+        const randomModelNumber = Math.floor(Math.random() * DEFAULT_CONFIG.RANDOM_CAR_MODELS.length);
+        vehicleName = DEFAULT_CONFIG.RANDOM_CAR_MODELS[randomModelNumber];
+    } else {
+        vehicleName = args[0];
+    }
 
     try {
         player.lastVehicle = new alt.Vehicle(

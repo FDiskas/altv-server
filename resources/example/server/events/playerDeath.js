@@ -1,6 +1,6 @@
 // @ts-check
-/// @altv/types-webview
-import alt from 'alt-server';
+/// <reference types="@altv/types" />
+import * as alt from 'alt-server';
 import chalk from 'chalk';
 import { randomPositionAround } from '../utility/vector';
 import { DEFAULT_CONFIG } from '../configuration/config';
@@ -23,6 +23,6 @@ function playerDeath(victim, killer, weaponHash) {
     }
 
     const randomPosition = randomPositionAround(victim.pos, DEFAULT_CONFIG.SPAWN_RANGE);
-    victim.spawn(randomPosition.x, randomPosition.y, randomPosition.z, 5);
+    victim.spawn(randomPosition.x, randomPosition.y, randomPosition.z, 10000);
     victim.send(`You have died and you will be spawned after 13min.`);
 }
